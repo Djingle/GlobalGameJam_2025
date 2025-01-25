@@ -100,14 +100,21 @@ TextureImporter:
       name: Sh_02_2
       rect:
         serializedVersion: 2
-        x: 1115
+        x: 1121
         y: 1174
-        width: 930
+        width: 924
         height: 874
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      border: {x: 46, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -392, y: 17}
+        - {x: -384, y: 331}
+        - {x: -73, y: 418}
+        - {x: 444, y: 393}
+        - {x: 462, y: -118}
+        - {x: 315, y: -437}
+        - {x: -249, y: -342}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -434,7 +441,7 @@ TextureImporter:
         width: 367
         height: 418
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -442,6 +449,27 @@ TextureImporter:
       bones: []
       spriteID: 952e31f1862faea4eac80a90539210c7
       internalID: -455105768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_02_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1565
+        width: 1104
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa26a3c94988d5438ff5967df26469a
+      internalID: 615726016
       vertices: []
       indices: 
       edges: []
@@ -465,6 +493,7 @@ TextureImporter:
       Sh_02_13: -1530536688
       Sh_02_14: 2119313327
       Sh_02_15: -2125938937
+      Sh_02_16: 615726016
       Sh_02_2: 1303948551
       Sh_02_3: -455105768
       Sh_02_4: -348776738
