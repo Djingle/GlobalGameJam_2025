@@ -22,11 +22,16 @@ public class Projectile : Bubble
             transform.localScale = new Vector3(m_Size, m_Size, m_Size);
             transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
         }
+        else if (IsAttached) { 
+            Player.Instance.AddSize(-m_Size * .001f);
+        }
         m_LifeTime -= Time.deltaTime;
         if (m_LifeTime < 0) {
             Pop();
         }
     }
+
+
 
     private void OnCollisionEnter(Collision collision)
     {

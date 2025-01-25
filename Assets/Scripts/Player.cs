@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
     public float m_Speed = 1f;
+    public float m_MinSize = 2f;
 
     private void Awake()
     {
@@ -119,7 +120,6 @@ public class Player : MonoBehaviour
 
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
-        Debug.Log(-m_MouseDir);
 
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
@@ -131,6 +131,13 @@ public class Player : MonoBehaviour
     public void AddSize(float size)
     {
         transform.localScale += new Vector3(size, size, size);
+        if (transform.localScale.x <= 2f) { Pop(); }
+    }
+
+    public void Pop()
+    {
+        //Temporary
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
