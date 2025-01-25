@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 757095789103465269}
   - component: {fileID: 214330378652571116}
   m_Layer: 0
-  m_Name: Bubble
+  m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.06
+  m_LinearDrag: 0.55
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -162,3 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ChargeSpeed: 0.01
+  m_LifeTime: 5
+  m_Drag: 0.5
