@@ -136,10 +136,7 @@ public class Player : MonoBehaviour
 
     public void Pop()
     {
-<<<<<<< Updated upstream
-        //Temporary
         Debug.Log("Pop!!");
-=======
         
     }
 
@@ -151,6 +148,5 @@ public class Player : MonoBehaviour
         else {
             bubble.PickUp();
         }
->>>>>>> Stashed changes
     }
 }

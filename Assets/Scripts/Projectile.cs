@@ -27,14 +27,9 @@ public class Projectile : Bubble
             transform.localScale = new Vector3(m_Size, m_Size, m_Size);
             transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
         }
-<<<<<<< Updated upstream
         else if (m_IsAttached) { Player.Instance.AddSize(-m_Size * 0.005f); }
         if (!m_IsAttached && m_ColliderActivationTimer > 0) {
             m_ColliderActivationTimer -= Time.deltaTime;
-=======
-        else if (IsAttached) { 
-            Player.Instance.AddSize(-m_Size * .005f);
->>>>>>> Stashed changes
         }
         m_LifeTime -= Time.deltaTime;
         if (m_LifeTime < 0) {
