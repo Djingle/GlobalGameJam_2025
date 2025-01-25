@@ -85,13 +85,21 @@ public class Player : MonoBehaviour
             return;
         }
         m_ShootTime = Time.time;
+        // Spawn the bubble
         GameObject bubble = Instantiate(m_BubblePrefab, transform);
+
+        // Place the bubble in front
         bubble.transform.localPosition = new Vector3(.7f,0,0);
         bubble.transform.localScale = new Vector3(.4f, .4f, .4f);
+
+        // Disable physics so that it stays in front
         bubble.GetComponent<Rigidbody2D>().simulated = false;
+
+        // Keep a ref to the bubble
         m_Bubble = bubble.GetComponent<Projectile>();
+
+        // Let the bubble know it's attached
         m_Bubble.IsAttached = true;
-        //AddSize(-.1f);
     }
 
     void StopShoot()
@@ -99,12 +107,33 @@ public class Player : MonoBehaviour
         if (m_Bubble == null) {
             Debug.Log("no bubble !");
         }
+        // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
         bubble_rb.velocity = m_MouseDir * m_ShotSpeed;
+
+        // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
+
+        // Let go of the bubble
         m_Bubble.transform.SetParent(null);
         m_Bubble.IsAttached = false;
         m_Bubble = null;
+    }
+
+    // Adds size to the bubble
+    public void AddSize(float size)
+    {
+        transform.localScale += new Vector3(size, size, size);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Bubble bubble = collision.gameObject.GetComponent<Bubble>();
+        if (bubble == null)
+            return;
+        else {
+            bubble.PickUp();
+        }
     }
 }
