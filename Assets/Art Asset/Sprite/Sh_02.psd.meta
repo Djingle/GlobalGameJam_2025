@@ -184,10 +184,10 @@ TextureImporter:
       name: Sh_02_4
       rect:
         serializedVersion: 2
-        x: 1188
-        y: 692
-        width: 4
-        height: 4
+        x: 1044
+        y: 557
+        width: 193
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Sh_02_5
       rect:
         serializedVersion: 2
-        x: 1261
-        y: 425
-        width: 453
-        height: 472
+        x: 1263
+        y: 427
+        width: 451
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Sh_02_6
       rect:
         serializedVersion: 2
-        x: 326
-        y: 193
-        width: 180
-        height: 104
+        x: 1789
+        y: 0
+        width: 259
+        height: 1194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Sh_02_7
       rect:
         serializedVersion: 2
-        x: 542
-        y: 201
-        width: 160
-        height: 101
+        x: 326
+        y: 193
+        width: 180
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: Sh_02_8
       rect:
         serializedVersion: 2
-        x: 752
-        y: 174
-        width: 86
-        height: 143
+        x: 542
+        y: 201
+        width: 160
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,10 +289,10 @@ TextureImporter:
       name: Sh_02_9
       rect:
         serializedVersion: 2
-        x: 879
-        y: 209
-        width: 177
-        height: 342
+        x: 752
+        y: 174
+        width: 86
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: Sh_02_10
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 177
-        width: 78
-        height: 108
+        x: 879
+        y: 209
+        width: 177
+        height: 342
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Sh_02_11
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 194
-        width: 141
-        height: 259
+        x: 1039
+        y: 177
+        width: 78
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Sh_02_12
       rect:
         serializedVersion: 2
-        x: 1339
-        y: 197
-        width: 188
-        height: 170
+        x: 1159
+        y: 194
+        width: 141
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,6 +373,27 @@ TextureImporter:
       name: Sh_02_13
       rect:
         serializedVersion: 2
+        x: 1339
+        y: 197
+        width: 188
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e538c19c779fc24caa451d4d2a17fa0
+      internalID: -1530536688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_02_14
+      rect:
+        serializedVersion: 2
         x: 1578
         y: 177
         width: 189
@@ -384,8 +405,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e538c19c779fc24caa451d4d2a17fa0
-      internalID: -1530536688
+      spriteID: 4e1a9ac12ad4b824d9b2daa88e4be212
+      internalID: 2119313327
       vertices: []
       indices: 
       edges: []
@@ -407,6 +428,7 @@ TextureImporter:
       Sh_02_11: -2138406482
       Sh_02_12: 722540967
       Sh_02_13: -1530536688
+      Sh_02_14: 2119313327
       Sh_02_2: 1303948551
       Sh_02_3: -455105768
       Sh_02_4: -348776738
@@ -416,7 +438,7 @@ TextureImporter:
       Sh_02_8: -1772724872
       Sh_02_9: -1068628724
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
