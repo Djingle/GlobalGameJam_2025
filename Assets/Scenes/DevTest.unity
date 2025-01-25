@@ -903,7 +903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301937552325474479, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       propertyPath: m_KnockBack
-      value: 20
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301937552325474479, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
+      propertyPath: m_ShotSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
