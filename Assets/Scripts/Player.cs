@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     Rigidbody2D m_rb;
     Vector3 m_MouseDir;
     Camera m_camera;
-    Bubble m_Bubble;
+    Projectile m_Bubble;
     float m_ShootTime = 0f;
     bool m_IsShooting = false;
 
@@ -42,11 +42,11 @@ public class Player : MonoBehaviour
     {
         m_MouseDir = m_camera.ScreenToWorldPoint(Input.mousePosition);
         m_MouseDir -= transform.position;
-        //float horizontalRight = Input.GetAxis("HorizontalRight");
-        //float verticalRight = Input.GetAxis("VerticalRight");
-        //if (horizontalRight > -1 && horizontalRight < 1 || verticalRight > -1 && verticalRight <1) {
-        //    m_MouseDir = new Vector3(horizontalRight, verticalRight, 0);
-        //}
+        float horizontalRight = Input.GetAxis("HorizontalRight");
+        float verticalRight = Input.GetAxis("VerticalRight");
+        if (horizontalRight > -1 && horizontalRight < 1 || verticalRight > -1 && verticalRight < 1) {
+            m_MouseDir = new Vector3(horizontalRight, verticalRight, 0);
+        }
         Orientate(m_MouseDir);
 
 
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         bubble.transform.localPosition = new Vector3(.7f,0,0);
         bubble.transform.localScale = new Vector3(.4f, .4f, .4f);
         bubble.GetComponent<Rigidbody2D>().simulated = false;
-        m_Bubble = bubble.GetComponent<Bubble>();
+        m_Bubble = bubble.GetComponent<Projectile>();
         m_Bubble.IsAttached = true;
         //AddSize(-.1f);
     }
