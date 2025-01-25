@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject m_BubblePrefab;
     Rigidbody2D m_rb;
     Vector3 m_MouseDir;
     Camera m_camera;
+    Bubble m_Bubble;
 
+    public GameObject m_BubblePrefab;
     public float m_ShotSpeed = 1f;
+    public float m_KnockBack = 1f;
 
     private void Start()
     {
@@ -22,8 +24,10 @@ public class Player : MonoBehaviour
         m_MouseDir -= transform.position;
         Orientate(m_MouseDir);
         if (Input.GetMouseButtonDown(0)) {
-            Shoot();
-            Debug.Log("shoot");
+            m_Bubble = StartShoot();
+        }
+        if (Input.GetMouseButtonUp(0)) {
+            StopShoot();
         }
     }
 
@@ -33,11 +37,21 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,rotZ);
     }
 
-    void Shoot()
+    Bubble StartShoot()
     {
-        GameObject bubble = Instantiate(m_BubblePrefab, transform.position, Quaternion.identity);
-        Rigidbody2D bubble_rb = bubble.GetComponent<Rigidbody2D>();
+        GameObject bubble = Instantiate(m_BubblePrefab, new Vector3(2, 0, 0), Quaternion.identity, transform);
+        //AddSize(-.1f);
+        return bubble.GetComponent<Bubble>();
+    }
+
+    void StopShoot()
+    {
+        if (m_Bubble == null) {
+            Debug.Log("no bubble !");
+        }
+        Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.velocity = m_MouseDir * m_ShotSpeed;
-        Debug.Log(m_MouseDir);
+        m_rb.AddForce(-m_MouseDir * m_KnockBack);
+        m_Bubble.transform.SetParent(null);
     }
 }

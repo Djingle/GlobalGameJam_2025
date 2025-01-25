@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     }
 }
 
+
+
 // Different states the game can be in. Can be accessed with : GameState.exampleState
 public enum GameState
 {
