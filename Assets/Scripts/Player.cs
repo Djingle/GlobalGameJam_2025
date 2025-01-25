@@ -141,17 +141,15 @@ public class Player : MonoBehaviour
 
     public void Pop()
     {
-        Debug.Log("Pop!!");
+        GameManager.Instance.ChangeState(GameState.GameOver);
         
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Bubble bubble = collision.gameObject.GetComponent<Bubble>();
-        if (bubble == null)
-            return;
-        else {
-            bubble.PickUp();
-        }
+        DamageSource ds = collision.gameObject.GetComponent<DamageSource>();
+        if (bubble) { bubble.PickUp(); }
+        if (ds) { ds.Damage(); }
     }
 }
