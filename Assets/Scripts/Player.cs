@@ -13,11 +13,13 @@ public class Player : MonoBehaviour
     bool m_IsShooting = false;
 
     public GameObject m_BubblePrefab;
-    public float m_ShotSpeed = 1f;
+    /*    public float m_ShotSpeed = 1f;*/
+    public float m_ShotSpeed = 15f;
     public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
     public float m_Speed = 1f;
-    public float m_MinSize = 2f;
+    public float m_SizeMin = 0.21f;
+    public float m_SizeMax = 0.38f;
 
     private void Awake()
     {
@@ -91,7 +93,8 @@ public class Player : MonoBehaviour
 
         // Place the bubble in front
         bubble.transform.localPosition = new Vector3(.2f,0,0);
-        bubble.transform.localScale = new Vector3(.4f, .4f, .4f);
+        float m_RandomSize = Random.Range(m_SizeMin, m_SizeMax);
+        bubble.transform.localScale = new Vector3(m_RandomSize, m_RandomSize, m_RandomSize);
 
         // Disable physics so that it stays in front
         bubble.GetComponent<Rigidbody2D>().simulated = false;
@@ -116,6 +119,7 @@ public class Player : MonoBehaviour
         // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
+
         Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
         bubble_rb.velocity = current_velocity + m_MouseDir * m_ShotSpeed;
 
