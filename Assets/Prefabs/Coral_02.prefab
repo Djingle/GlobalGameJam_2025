@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8265696539874862279}
   - component: {fileID: 6686217268917154788}
   - component: {fileID: 6626480706767505124}
+  - component: {fileID: 1491963236921623087}
   m_Layer: 0
   m_Name: Coral_02
   m_TagString: Untagged
@@ -120,19 +121,34 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.9587355, y: 0.13407302}
-  - {x: 2.0752068, y: 2.058086}
-  - {x: 0.8388758, y: 2.3329673}
-  - {x: -0.72105694, y: 2.3270245}
-  - {x: -1.6901026, y: 2.0051}
-  - {x: -2.179572, y: 0.93266225}
-  - {x: -2.0991945, y: -0.04108715}
+  - {x: 1.4002223, y: -0.060757205}
+  - {x: 1.8154331, y: 1.603482}
+  - {x: 0.6830116, y: 1.1509974}
+  - {x: 0.49987912, y: 2.0282848}
+  - {x: -0.25942063, y: 1.5902449}
+  - {x: -1.1315893, y: 2.1869414}
+  - {x: -2.2445157, y: 1.2443906}
+  - {x: -2.4498887, y: 0.5823695}
+  - {x: -2.3588643, y: -0.41914114}
   - {x: -1.5645399, y: -1.4173474}
-  - {x: -0.58913517, y: -2.2482083}
-  - {x: 0.47074032, y: -2.2673814}
-  - {x: 1.377615, y: -1.273042}
-  - {x: 1.9677, y: 0.13407326}
+  - {x: -0.8099428, y: -2.2611966}
+  - {x: -0.087772965, y: -2.2803702}
+  - {x: 0.25275642, y: -2.2850037}
+  - {x: 1.1827847, y: -1.4678723}
+  - {x: 1.5780396, y: -0.086734295}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1491963236921623087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197012837962503789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d596dfd51279a741b6d23e1be2b6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

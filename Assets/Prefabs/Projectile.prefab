@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Size: 0.4
-  m_SizeMult: 0.5
   m_IsAttached: 0
   m_ChargeSpeed: 0.01
   m_LifeTime: 5
