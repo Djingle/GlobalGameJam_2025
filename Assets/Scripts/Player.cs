@@ -137,6 +137,6 @@ public class Player : MonoBehaviour
     public void Pop()
     {
         //Temporary
-        Destroy(gameObject);
+        Debug.Log("Pop!!");
     }
 }
