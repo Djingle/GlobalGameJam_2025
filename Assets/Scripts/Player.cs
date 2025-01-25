@@ -40,22 +40,22 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        //Get mouse position relative to gameObject
         m_MouseDir = m_camera.ScreenToWorldPoint(Input.mousePosition);
         m_MouseDir -= transform.position;
         float horizontalRight = Input.GetAxis("HorizontalRight");
         float verticalRight = Input.GetAxis("VerticalRight");
-        if (horizontalRight > -1 && horizontalRight < 1 || verticalRight > -1 && verticalRight < 1) {
+        //If there is a right joystick input, the gameObject direction becomes this one instead
+        if (horizontalRight != 0 || verticalRight != 0) {
             m_MouseDir = new Vector3(horizontalRight, verticalRight, 0);
         }
         Orientate(m_MouseDir);
 
-
-
-        if (Input.GetMouseButtonDown(0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+        if (Input.GetMouseButtonDown(0) || Input.GetAxis("RTrigger") > 0) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
             StartShoot();
         }
-        if (Input.GetMouseButtonUp(0)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis("VerticalRight") == 0) {
+        if (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0 && !Input.GetMouseButton(0)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis("VerticalRight") == 0) {
             m_IsShooting = false;
             StopShoot();
         }
