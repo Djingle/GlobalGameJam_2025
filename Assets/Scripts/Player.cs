@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public float m_Speed = 1f;
     public float m_SizeMin = 0.21f;
     public float m_SizeMax = 0.38f;
+    public bool m_Shrink = true;
 
     private void Awake()
     {
@@ -135,6 +136,7 @@ public class Player : MonoBehaviour
     // Adds size to the bubble
     public void AddSize(float size)
     {
+        if (m_Shrink == false) return;
         transform.localScale += new Vector3(size, size, size);
         if (transform.localScale.x <= 2f) { Pop(); }
     }
