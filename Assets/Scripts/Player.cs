@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     Projectile m_Bubble;
     float m_ShootTime = .1f;
     bool m_IsShooting = false;
+    Animator m_Animator;
 
     public GameObject m_BubblePrefab;
     public float m_ShotSpeed = 15f;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        m_Animator = GetComponentInChildren<Animator>();
         m_rb = GetComponent<Rigidbody2D>();
         m_camera = Camera.main;
     }
@@ -134,6 +136,9 @@ public class Player : MonoBehaviour
         m_Bubble.transform.SetParent(null);
         m_Bubble.m_IsAttached = false;
         m_Bubble = null;
+
+        // Animate Player
+        m_Animator.SetTrigger("TrShoot");
     }
 
     // Adds size to the bubble
