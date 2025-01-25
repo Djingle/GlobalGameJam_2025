@@ -27,6 +27,7 @@ public class Projectile : Bubble
             Player.Instance.AddSize(-m_Size * m_ChargeSizeMult);
             transform.localScale = new Vector3(m_Size, m_Size, m_Size);
             transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
+            Debug.Log("oui");
         }
 
         else if (m_IsAttached) { Player.Instance.AddSize(-m_Size * 0.005f); }
