@@ -94,7 +94,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_0ce8a778a7cb484bb66b47c2aca96c8c: 20
-    - Vector1_135f8aa6cd4b4c5fb98c6031128a36ca: 3
+    - Vector1_135f8aa6cd4b4c5fb98c6031128a36ca: 1.2
     - Vector1_38b2083762af42d387cd1f29d6e36702: 0.04
     - Vector1_4412bbfe52c645bda829c881825ac9f4: 0.01
     - Vector1_464c32e4ab6b4e6094a8f4421311b01f: 0
@@ -121,17 +121,17 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_1e0fcd59089043d89c1f1a98278a8aae: {r: 0.062240932, g: 0.062240932, b: 0.062240932, a: 1}
-    - Color_28269c84f9da4c28862479bebd8d8dc4: {r: 0.0019004198, g: 0.0019004198, b: 0.0019004198, a: 0}
-    - Color_3338a6db5b41432db513b736a48930bd: {r: 0.1649385, g: 0.1649385, b: 0.1649385, a: 0}
-    - Color_3ca132628a3f4291ae2bb0f305139ee8: {r: 1, g: 1, b: 1, a: 1}
+    - Color_1e0fcd59089043d89c1f1a98278a8aae: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
+    - Color_28269c84f9da4c28862479bebd8d8dc4: {r: 0.0011393506, g: 0.0011393506, b: 0.0011393506, a: 0.7176471}
+    - Color_3338a6db5b41432db513b736a48930bd: {r: 0.14716971, g: 0.14716971, b: 0.14716971, a: 0}
+    - Color_3ca132628a3f4291ae2bb0f305139ee8: {r: 1, g: 1, b: 1, a: 0}
     - Color_6600ecad890c4bac8240c15c98db1005: {r: 0.28357738, g: 0.4811321, b: 0.16567284, a: 1}
-    - Color_f20acf57a07e4896b1ebe1b6816ed119: {r: 0.02641511, g: 0.02641511, b: 0.02641511, a: 0}
+    - Color_f20acf57a07e4896b1ebe1b6816ed119: {r: 0.5018867, g: 0.32082793, b: 0.28692767, a: 0}
     - Vector2_442163ca9e3f4ba38d4c181691d27bec: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_48b339c852c447e1964d8592742ec79d: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_57bced3ac2c54cb38083a678799fd9de: {r: 1.02, g: 1, b: 0, a: 0}
     - Vector2_5f1442b94d5f44b292ad5752f8587553: {r: 1.73, g: 2.76, b: 0, a: 0}
-    - Vector2_a9221b2bbe18452b92c50c3c7b24b756: {r: -0.02, g: 0, b: 0, a: 0}
+    - Vector2_a9221b2bbe18452b92c50c3c7b24b756: {r: -0.02, g: -0.008, b: 0, a: 0}
     - Vector2_c9165da66ca747289efc3d6538c9b0c4: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_ef813f5a6ce64b1b91ce4573843ad4c5: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
