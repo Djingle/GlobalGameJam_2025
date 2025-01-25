@@ -136,7 +136,21 @@ public class Player : MonoBehaviour
 
     public void Pop()
     {
+<<<<<<< Updated upstream
         //Temporary
         Debug.Log("Pop!!");
+=======
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Bubble bubble = collision.gameObject.GetComponent<Bubble>();
+        if (bubble == null)
+            return;
+        else {
+            bubble.PickUp();
+        }
+>>>>>>> Stashed changes
     }
 }

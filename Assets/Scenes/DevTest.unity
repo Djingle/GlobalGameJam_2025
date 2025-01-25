@@ -417,6 +417,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &426440270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1878313866864897280, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
+  m_PrefabInstance: {fileID: 1838027664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &426440276
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426440270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e886aaa1841f3c343af070989f3cce96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &426440277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426440270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb73eae8fdf7624a82ec207f43b1b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,15 +902,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5821712470583076350, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5821712470583076350, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5821712470583076350, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5821712470583076350, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -930,9 +968,18 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+<<<<<<< Updated upstream
     - targetCorrespondingSourceObject: {fileID: 8563638732969652393, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1097949590}
+=======
+    - targetCorrespondingSourceObject: {fileID: 1878313866864897280, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426440276}
+    - targetCorrespondingSourceObject: {fileID: 1878313866864897280, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426440277}
+>>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 7ccea32a83bcfc048bcc593944d67f91, type: 3}
 --- !u!1001 &2084725488
 PrefabInstance:
