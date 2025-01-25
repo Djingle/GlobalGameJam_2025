@@ -39,7 +39,9 @@ public class Player : MonoBehaviour
 
     Bubble StartShoot()
     {
-        GameObject bubble = Instantiate(m_BubblePrefab, new Vector3(2, 0, 0), Quaternion.identity, transform);
+        GameObject bubble = Instantiate(m_BubblePrefab, transform);
+        bubble.transform.localPosition = new Vector3(1,0,0);
+        bubble.GetComponent<Rigidbody2D>().simulated = false;
         //AddSize(-.1f);
         return bubble.GetComponent<Bubble>();
     }
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
             Debug.Log("no bubble !");
         }
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
+        bubble_rb.simulated = true;
         bubble_rb.velocity = m_MouseDir * m_ShotSpeed;
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
         m_Bubble.transform.SetParent(null);
