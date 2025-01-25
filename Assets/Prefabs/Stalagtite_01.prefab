@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3078692043390811886}
   - component: {fileID: 39825225591190768}
+  - component: {fileID: 5069155345661030094}
   m_Layer: 0
   m_Name: Stalagtite_01
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3640095289031687102}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.29, y: 17.1, z: 0}
+  m_LocalPosition: {x: -2.56, y: 15.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,3 +85,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &5069155345661030094
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640095289031687102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 3.0725904, y: -4.290329}
+  - {x: 2.2910995, y: -2.8230886}
+  - {x: 1.2965873, y: -3.3532429}
+  - {x: 0.74684274, y: -2.231947}
+  - {x: -0.40644956, y: -3.051529}
+  - {x: -0.85199165, y: -2.4487104}
+  - {x: -1.2419798, y: -3.1922922}
+  - {x: -1.7286224, y: -3.0378237}
+  - {x: -1.9310846, y: -2.161296}
+  - {x: -2.1700172, y: -2.5488834}
+  - {x: -2.6326628, y: -2.4193125}
+  - {x: -3.0711017, y: -0.31398392}
+  - {x: -3.7170448, y: 0.5296879}
+  - {x: -2.963436, y: 3.0789423}
+  - {x: -1.269361, y: 3.938364}
+  - {x: 0.9565084, y: 3.4117088}
+  - {x: 1.6190695, y: 1.9948483}
+  - {x: 3.823118, y: 1.6357479}
+  - {x: 3.9684703, y: -0.7422209}
+  - {x: 3.118942, y: -4.2735043}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
