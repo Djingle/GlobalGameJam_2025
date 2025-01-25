@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
     Vector3 m_MouseDir;
     Camera m_camera;
     Bubble m_Bubble;
+    float m_ShootTime = 0f;
+    bool m_IsShooting = false;
 
     public GameObject m_BubblePrefab;
     public float m_ShotSpeed = 1f;
+    public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
 
     private void Awake()
@@ -40,10 +43,17 @@ public class Player : MonoBehaviour
         m_MouseDir -= transform.position;
         Orientate(m_MouseDir);
         if (Input.GetMouseButtonDown(0)) {
+            m_IsShooting = true;
             StartShoot();
         }
         if (Input.GetMouseButtonUp(0)) {
+            m_IsShooting = false;
             StopShoot();
+        }
+
+        if (!GameManager.Instance.m_ChargeMode && m_IsShooting && Time.time - m_ShootTime > 1/m_FireRate) {
+            StopShoot();
+            StartShoot();
         }
     }
 
@@ -59,6 +69,7 @@ public class Player : MonoBehaviour
             Debug.LogWarning("There is already a bubble !");
             return;
         }
+        m_ShootTime = Time.time;
         GameObject bubble = Instantiate(m_BubblePrefab, transform);
         bubble.transform.localPosition = new Vector3(.7f,0,0);
         bubble.transform.localScale = new Vector3(.4f, .4f, .4f);

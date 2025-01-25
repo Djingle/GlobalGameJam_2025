@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
   m_ShotSpeed: 1
+  m_FireRate: 1.02
   m_KnockBack: 1
 --- !u!50 &3772727944308230988
 Rigidbody2D:

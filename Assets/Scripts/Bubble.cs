@@ -10,13 +10,12 @@ public class Bubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("salut");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsAttached && GameManager.Instance.ChargeMode) {
+        if (IsAttached && GameManager.Instance.m_ChargeMode) {
             transform.localScale += new Vector3(m_ChargeSpeed, m_ChargeSpeed, m_ChargeSpeed);
             transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
         }
