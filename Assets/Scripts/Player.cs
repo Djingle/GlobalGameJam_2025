@@ -9,13 +9,12 @@ public class Player : MonoBehaviour
     Vector3 m_MouseDir;
     Camera m_camera;
     Projectile m_Bubble;
-    float m_ShootTime = 0f;
+    float m_ShootTime = .1f;
     bool m_IsShooting = false;
 
     public GameObject m_BubblePrefab;
-/*    public float m_ShotSpeed = 1f;*/
-    public float m_ShotSpeedMin = 0;
-    public float m_ShotSpeedMax = 0;
+    /*    public float m_ShotSpeed = 1f;*/
+    public float m_ShotSpeed = 15f;
     public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
     public float m_Speed = 1f;
@@ -93,7 +92,7 @@ public class Player : MonoBehaviour
         GameObject bubble = Instantiate(m_BubblePrefab, transform);
 
         // Place the bubble in front
-        bubble.transform.localPosition = new Vector3(.7f,0,0);
+        bubble.transform.localPosition = new Vector3(.2f,0,0);
         float m_RandomSize = Random.Range(m_SizeMin, m_SizeMax);
         bubble.transform.localScale = new Vector3(m_RandomSize, m_RandomSize, m_RandomSize);
 
@@ -120,8 +119,9 @@ public class Player : MonoBehaviour
         // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
-        float m_ShotSpeed = Random.Range(m_ShotSpeedMin, m_ShotSpeedMax);
-        bubble_rb.velocity = m_MouseDir * m_ShotSpeed;
+
+        Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
+        bubble_rb.velocity = current_velocity + m_MouseDir * m_ShotSpeed;
 
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
@@ -141,15 +141,7 @@ public class Player : MonoBehaviour
 
     public void Pop()
     {
+        Debug.Log("Pop!!");
         GameManager.Instance.ChangeState(GameState.GameOver);
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Bubble bubble = collision.gameObject.GetComponent<Bubble>();
-        DamageSource ds = collision.gameObject.GetComponent<DamageSource>();
-        if (bubble) { bubble.PickUp(); }
-        if (ds) { ds.Damage(); }
     }
 }

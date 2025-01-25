@@ -8,6 +8,8 @@ public abstract class Bubble : MonoBehaviour
     public float m_SizeMult = .5f;
     public bool m_IsAttached;
 
+    protected Collider2D m_Collider;
+
     public void PickUp()
     {
         Player.Instance.AddSize(m_Size * m_SizeMult);
