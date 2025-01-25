@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     bool m_IsShooting = false;
 
     public GameObject m_BubblePrefab;
-    /*    public float m_ShotSpeed = 1f;*/
     public float m_ShotSpeed = 15f;
     public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
@@ -146,7 +145,7 @@ public class Player : MonoBehaviour
         //if (transform.localScale.x <= 2f) { Pop(); }
     }
 
-    public void Pop()
+    public void Die()
     {
         Debug.Log("Pop!!");
         GameManager.Instance.ChangeState(GameState.GameOver);

@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     // The state the game is currently in. It should only be updated by ChangeState
     public GameState State { get; private set; }
     public bool m_ChargeMode = true;
-
+    public Vector3 m_SpawnLocation = Vector3.zero;
+    public GameObject m_PlayerPrefab;
 
     private void Awake()
     {
@@ -43,7 +44,8 @@ public class GameManager : MonoBehaviour
             case GameState.Menu:
                 break;
             case GameState.GameOver:
-                Debug.Log("KO");
+                Destroy(Player.Instance.gameObject);
+                StartCoroutine(Respawn());
                 break;
             case GameState.Credits:
                 break;
@@ -51,6 +53,14 @@ public class GameManager : MonoBehaviour
 
         // Send the event to every listening script
         StateChanged?.Invoke(newState);
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1);
+        Debug.Log("SPAWN");
+        Instantiate(m_PlayerPrefab, m_SpawnLocation, Quaternion.identity);
+        Cameraman.Instance.SetTarget();
     }
 }
 

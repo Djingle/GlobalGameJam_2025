@@ -22,6 +22,7 @@ public class PlayerAnimator : MonoBehaviour
                 m_Animator.SetTrigger("TrShoot");
                 m_IsShooting = true;
             }
+
             if (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0 && !Input.GetMouseButton(0) && m_IsShooting)
             {
                 m_Animator.SetTrigger("TrStopShoot");
