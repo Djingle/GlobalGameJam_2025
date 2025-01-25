@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class DamageSource : MonoBehaviour
 {
-    public float m_DamageAmount = 3f;
-    // Start is called before the first frame update
+    Collider2D m_Collider;
     void Start()
     {
-        
+        m_Collider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
-
-    public void Damage()
-    {
-        Player.Instance.AddSize(-m_DamageAmount);
+        if (collision.gameObject.GetComponent<Player>() == null) return;
+        Player.Instance.Pop();
     }
 }

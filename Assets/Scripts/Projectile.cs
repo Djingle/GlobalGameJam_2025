@@ -30,7 +30,6 @@ public class Projectile : Bubble
             Debug.Log("oui");
         }
 
-        else if (m_IsAttached) { Player.Instance.AddSize(-m_Size * 0.005f); }
 
         if (!m_IsAttached && m_ColliderActivationTimer > 0) {
             m_ColliderActivationTimer -= Time.deltaTime;

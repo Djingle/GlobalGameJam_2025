@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public float m_SizeMin = 0.21f;
     public float m_SizeMax = 0.38f;
     public bool m_Shrink = true;
+    public float m_ShrinkFactor = 1f;
+    public float m_GrowFactor = 1f;
 
     private void Awake()
     {
@@ -127,6 +129,8 @@ public class Player : MonoBehaviour
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
 
+        if (!GameManager.Instance.m_ChargeMode) AddSize(-.05f);
+
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
         m_Bubble.m_IsAttached = false;
@@ -137,8 +141,9 @@ public class Player : MonoBehaviour
     public void AddSize(float size)
     {
         if (m_Shrink == false) return;
+        size = size > 0 ? size * m_GrowFactor : size * m_ShrinkFactor;
         transform.localScale += new Vector3(size, size, size);
-        if (transform.localScale.x <= 2f) { Pop(); }
+        //if (transform.localScale.x <= 2f) { Pop(); }
     }
 
     public void Pop()

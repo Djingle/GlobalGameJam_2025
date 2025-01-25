@@ -10,7 +10,7 @@ public class Cameraman : MonoBehaviour
         target = Player.Instance.transform;
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
