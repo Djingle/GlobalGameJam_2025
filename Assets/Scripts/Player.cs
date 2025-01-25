@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         GameObject bubble = Instantiate(m_BubblePrefab, transform);
 
         // Place the bubble in front
-        bubble.transform.localPosition = new Vector3(.7f,0,0);
+        bubble.transform.localPosition = new Vector3(.2f,0,0);
         bubble.transform.localScale = new Vector3(.4f, .4f, .4f);
 
         // Disable physics so that it stays in front
@@ -116,7 +116,8 @@ public class Player : MonoBehaviour
         // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
-        bubble_rb.velocity = m_MouseDir * m_ShotSpeed;
+        Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
+        bubble_rb.velocity = current_velocity + m_MouseDir * m_ShotSpeed;
 
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
@@ -137,16 +138,5 @@ public class Player : MonoBehaviour
     public void Pop()
     {
         Debug.Log("Pop!!");
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Bubble bubble = collision.gameObject.GetComponent<Bubble>();
-        if (bubble == null)
-            return;
-        else {
-            bubble.PickUp();
-        }
     }
 }

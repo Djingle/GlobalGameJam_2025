@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1072529523180948073}
   - component: {fileID: 757095789103465269}
   - component: {fileID: 214330378652571116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.55
+  m_LinearDrag: 1.76
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8437850297906122716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -161,6 +161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cef2fcf3f8f5f14784bd578bf99322c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Size: 0.4
+  m_SizeMult: 0.5
+  m_IsAttached: 0
   m_ChargeSpeed: 0.01
   m_LifeTime: 5
   m_Drag: 0.5
+  m_ChargeSizeMult: 0.005
+  m_ColliderActivationTimer: 0.5
