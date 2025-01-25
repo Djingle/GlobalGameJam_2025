@@ -349,10 +349,10 @@ TextureImporter:
       name: Sh_01_8
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1171
-        width: 270
-        height: 223
+        x: 30
+        y: 1191
+        width: 263
+        height: 236
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,9 +371,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 232
-        y: 1399
+        y: 1431
         width: 121
-        height: 274
+        height: 242
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
