@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     // The state the game is currently in. It should only be updated by ChangeState
     public GameState State { get; private set; }
+    public bool ChargeMode { get; private set; } = true;
 
 
     private void Awake()

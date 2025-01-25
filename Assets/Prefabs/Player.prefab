@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
+  m_ShotSpeed: 1
+  m_KnockBack: 1
 --- !u!50 &3772727944308230988
 Rigidbody2D:
   serializedVersion: 4
@@ -117,7 +119,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b8b5daafd566ebf4d9650968f590ed37, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
