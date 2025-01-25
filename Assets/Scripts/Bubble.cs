@@ -23,7 +23,7 @@ public abstract class Bubble : MonoBehaviour
     {
 
         Debug.Log("Trigger");
-        if (m_IsAttached || other.gameObject.GetComponent<Player>() == null) {
+        if (m_IsAttached || other.gameObject.GetComponent<PlayerTrigger>() == null) {
             Debug.Log("return");
             return;
         }
