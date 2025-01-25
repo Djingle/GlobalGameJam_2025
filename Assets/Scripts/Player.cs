@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
         m_Bubble = bubble.GetComponent<Projectile>();
 
         // Let the bubble know it's attached
-        m_Bubble.IsAttached = true;
+        m_Bubble.m_IsAttached = true;
     }
 
     void StopShoot()
@@ -125,11 +125,10 @@ public class Player : MonoBehaviour
 
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
-        Debug.Log(-m_MouseDir);
 
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
-        m_Bubble.IsAttached = false;
+        m_Bubble.m_IsAttached = false;
         m_Bubble = null;
     }
 
@@ -137,6 +136,13 @@ public class Player : MonoBehaviour
     public void AddSize(float size)
     {
         transform.localScale += new Vector3(size, size, size);
+        if (transform.localScale.x <= 2f) { Pop(); }
+    }
+
+    public void Pop()
+    {
+        Debug.Log("Pop!!");
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
