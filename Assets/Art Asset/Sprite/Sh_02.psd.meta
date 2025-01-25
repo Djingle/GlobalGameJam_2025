@@ -416,7 +416,7 @@ TextureImporter:
       Sh_02_8: -1772724872
       Sh_02_9: -1068628724
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
