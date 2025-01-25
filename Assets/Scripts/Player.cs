@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Vector3 m_MouseDir;
     Camera m_camera;
     Projectile m_Bubble;
-    float m_ShootTime = 0f;
+    float m_ShootTime = .1f;
     bool m_IsShooting = false;
 
     public GameObject m_BubblePrefab;
