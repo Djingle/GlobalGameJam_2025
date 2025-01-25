@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
             case GameState.Menu:
                 break;
             case GameState.GameOver:
+                Debug.Log("KO");
                 break;
             case GameState.Credits:
                 break;

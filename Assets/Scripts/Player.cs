@@ -142,5 +142,6 @@ public class Player : MonoBehaviour
     public void Pop()
     {
         Debug.Log("Pop!!");
+        GameManager.Instance.ChangeState(GameState.GameOver);
     }
 }

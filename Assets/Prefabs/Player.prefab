@@ -118,8 +118,8 @@ MonoBehaviour:
   m_FireRate: 1.02
   m_KnockBack: 50
   m_Speed: 1
->>>>>>> 2361d88bc2ab0a3a67ab354017144a4c2911dff2
-  m_MinSize: 2
+  m_SizeMin: 0.21
+  m_SizeMax: 0.38
 --- !u!50 &3772727944308230988
 Rigidbody2D:
   serializedVersion: 4
