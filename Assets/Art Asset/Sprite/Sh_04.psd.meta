@@ -128,6 +128,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sh_04_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1600
+        width: 291
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcbe7fb6630d8c4f8424ae2511a13b3
+      internalID: 2063620509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_2
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1211
+        width: 421
+        height: 1268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30610104e500d84e84c67c68b29be77
+      internalID: -536195047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1905
+        width: 355
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382fe8002507c984883e589cb44cd0a5
+      internalID: -1067845778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_4
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 2113
+        width: 322
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2688cc3f7cb41243ab71265f45b3aec
+      internalID: 1847534936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1790
+        width: 313
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0f8c73fff5b7b49b367ccdf02bb19b
+      internalID: 1262530986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_6
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1504
+        width: 311
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adca09c521bd9eb4d9e3a9ba237132db
+      internalID: 389611851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_7
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1619
+        width: 343
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e36642a878d49248b5afa21fbf97814
+      internalID: 1426275750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_8
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2092
+        width: 437
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ebcd0cd93ccbc48a259dad37ab0c74
+      internalID: -1854661077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_04_9
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 2012
+        width: 332
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f235086974f8044a8af9d50fee1e1a3
+      internalID: 1681392604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,6 +329,15 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Sh_04_0: 9019884
+      Sh_04_1: 2063620509
+      Sh_04_2: -536195047
+      Sh_04_3: -1067845778
+      Sh_04_4: 1847534936
+      Sh_04_5: 1262530986
+      Sh_04_6: 389611851
+      Sh_04_7: 1426275750
+      Sh_04_8: -1854661077
+      Sh_04_9: 1681392604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 
