@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2974778632344466646}
   - component: {fileID: 6119542649128913334}
   - component: {fileID: -5351330272648978210}
+  - component: {fileID: 8044539689576068699}
+  - component: {fileID: 6897085378727342820}
   m_Layer: 0
   m_Name: Coral_01
   m_TagString: Untagged
@@ -120,8 +122,74 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.4, y: 0}
-  - {x: 1.4, y: 0}
+  - {x: -1.0674393, y: -0.09906062}
+  - {x: -0.49076578, y: -0.40552828}
+  - {x: -0.53522885, y: -0.9932627}
+  - {x: 0.35995132, y: -1.007107}
+  - {x: 0.41044176, y: -0.053888794}
+  - {x: 0.7015255, y: 0.0039202273}
+  - {x: 0.60095704, y: 0.20051692}
+  - {x: 0.8480909, y: 0.45284852}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &8044539689576068699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223865347677555477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d596dfd51279a741b6d23e1be2b6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &6897085378727342820
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223865347677555477}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.0957422, y: -0.03537879}
+  - {x: -0.793796, y: 0.25441873}
+  - {x: -0.8908333, y: 0.5647365}
+  - {x: -0.8878113, y: 1.0469128}
+  - {x: -0.3598439, y: 0.6869839}
+  - {x: -0.26214325, y: 1.0963066}
+  - {x: 0.23350005, y: 0.89862126}
+  - {x: 0.40432262, y: 0.51225424}
+  - {x: 0.84809095, y: 0.5094546}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
