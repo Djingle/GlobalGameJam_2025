@@ -51,11 +51,11 @@ public class Player : MonoBehaviour
         }
         Orientate(m_MouseDir);
 
-        if (Input.GetMouseButtonDown(0) || Input.GetAxis("RTrigger") > 0) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+        if (Input.GetMouseButtonDown(0) || Input.GetAxis("RTrigger") > 0 && !m_IsShooting) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
             StartShoot();
         }
-        if (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0 && !Input.GetMouseButton(0)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis("VerticalRight") == 0) {
+        if (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0 && !Input.GetMouseButton(0) && m_IsShooting) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis("VerticalRight") == 0) {
             m_IsShooting = false;
             StopShoot();
         }
@@ -107,6 +107,11 @@ public class Player : MonoBehaviour
         if (m_Bubble == null) {
             Debug.Log("no bubble !");
         }
+
+        Vector2 knockback = new Vector2(m_MouseDir.x, m_MouseDir.y);
+        knockback.Normalize();
+        m_MouseDir = new Vector3(knockback.x, knockback.y, 0);
+
         // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
@@ -114,6 +119,7 @@ public class Player : MonoBehaviour
 
         // Knockback
         m_rb.AddForce(-m_MouseDir * m_KnockBack);
+        Debug.Log(-m_MouseDir);
 
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
