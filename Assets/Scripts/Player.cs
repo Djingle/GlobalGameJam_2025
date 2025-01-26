@@ -58,15 +58,14 @@ public class Player : MonoBehaviour
         float verticalRight = Input.GetAxis("VerticalRight");
         //If there is a right joystick input, the gameObject direction becomes this one instead
         if (horizontalRight != 0 || verticalRight != 0) {
-            m_MouseDir = new Vector3(horizontalRight, verticalRight, 0);
+            m_MouseDir = new Vector3(-horizontalRight, -verticalRight, 0);
         }
         Orientate(m_MouseDir);
 
         // Start shooting (mitraillette)
-        if (!m_IsShooting && Input.GetMouseButtonDown(0) || Input.GetAxis("AButton") > 0) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+        if (!m_IsShooting && (Input.GetMouseButtonDown(0) || Input.GetAxis("AButton") > 0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
             m_ChargeMode = false;
-            Debug.Log("oui");
             StartShoot();
         }
         // Stop shooting (mitraillette)
@@ -81,13 +80,14 @@ public class Player : MonoBehaviour
             StartShoot();
         }
         // Stop shooting (charged)
-        if (m_IsShooting && (Input.GetMouseButtonUp(1) || Input.GetAxis("RTrigger") ==  0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(0)){
+        if (m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(1) || Input.GetAxis("RTrigger") ==  0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(0)){
             //m_ChargeMode = false;
             m_IsShooting = false;
             StopShoot();
         }
 
         if (!m_ChargeMode && m_IsShooting && Time.time - m_ShootTime > 1/m_FireRate) {
+            Debug.Log("stopstart");
             StopShoot();
             StartShoot();
         }
@@ -153,9 +153,8 @@ public class Player : MonoBehaviour
         bubble_rb.simulated = true;
 
         // Knockback
-        Debug.Log("size : " + m_Bubble.m_Size);
         float mult = m_ChargeMode ? m_ChargeKnockBack : 1;
-        Debug.Log("strength : " + m_Bubble.m_Size * m_KnockBack * mult + ", mult : " + mult);
+        //Debug.Log("strength : " + m_Bubble.m_Size * m_KnockBack * mult + ", mult : " + mult);
         m_rb.AddForce(-direction * m_KnockBack * m_Bubble.m_Size * mult);
 
         // Random variation in bubble angle
