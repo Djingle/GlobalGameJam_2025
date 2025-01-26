@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821712470583076350}
-  - component: {fileID: 2591551392804595473}
   - component: {fileID: 8301937552325474479}
   - component: {fileID: -538364056226443254}
   - component: {fileID: 176599690560719160}
@@ -38,58 +37,6 @@ Transform:
   - {fileID: 6988917776571168620}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2591551392804595473
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878313866864897280}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.1764706}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!114 &8301937552325474479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,15 +50,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
-  m_ShotSpeed: 7.2
-  m_FireRate: 5.05
-  m_KnockBack: 80
-  m_Speed: 2.41
-  m_SizeMin: 0.21
-  m_SizeMax: 0.38
+  m_ShotSpeed: 4
+  m_FireRate: 20
+  m_KnockBack: 85
+  m_Speed: 2.6
+  m_SizeMin: 0.1
+  m_SizeMax: 0.2
+  m_AngleMax: 20
   m_Shrink: 1
-  m_ShrinkFactor: 1
-  m_GrowFactor: 1
+  m_ShrinkFactor: 0.1
+  m_GrowFactor: 0.1
+  m_DeathScale: 0.5
+  m_ChargeMode: 0
 --- !u!58 &-538364056226443254
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -121,7 +71,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1878313866864897280}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b8b5daafd566ebf4d9650968f590ed37, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -248,7 +198,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1c1be840ad9d8e44dbbe2f5f1b056ce8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -304,7 +254,7 @@ GameObject:
   - component: {fileID: 8904577423950571816}
   - component: {fileID: 503350550628533713}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Gregg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,8 +269,8 @@ Transform:
   m_GameObject: {fileID: 6492290698325763218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: 0, z: 0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5821712470583076350}
@@ -366,8 +316,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 794b2056ab34a834bbf26414d2743f84, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

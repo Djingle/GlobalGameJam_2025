@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     // The state the game is currently in. It should only be updated by ChangeState
     public GameState State { get; private set; }
-    public bool m_ChargeMode = true;
     public Vector3 m_SpawnLocation = Vector3.zero;
     public GameObject m_PlayerPrefab;
 
@@ -44,8 +43,7 @@ public class GameManager : MonoBehaviour
             case GameState.Menu:
                 break;
             case GameState.GameOver:
-                Destroy(Player.Instance.gameObject);
-                StartCoroutine(Respawn());
+                StartCoroutine(DieAndRespawn());
                 break;
             case GameState.Credits:
                 break;
@@ -55,8 +53,11 @@ public class GameManager : MonoBehaviour
         StateChanged?.Invoke(newState);
     }
 
-    IEnumerator Respawn()
+    IEnumerator DieAndRespawn()
     {
+        yield return new WaitForSeconds(1);
+        Debug.Log("DIE");
+        Destroy(Player.Instance.gameObject);
         yield return new WaitForSeconds(1);
         Debug.Log("SPAWN");
         Instantiate(m_PlayerPrefab, m_SpawnLocation, Quaternion.identity);

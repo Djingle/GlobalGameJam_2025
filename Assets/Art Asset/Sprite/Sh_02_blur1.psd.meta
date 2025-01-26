@@ -100,13 +100,13 @@ TextureImporter:
       name: Sh_02_2
       rect:
         serializedVersion: 2
-        x: 1115
+        x: 1161
         y: 1174
-        width: 930
+        width: 884
         height: 874
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -434,7 +434,7 @@ TextureImporter:
         width: 367
         height: 418
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -100,8 +100,8 @@ TextureImporter:
       name: Sh_03_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1048
+        x: 2
+        y: 1046
         width: 1355
         height: 1000
       alignment: 0
@@ -111,7 +111,7 @@ TextureImporter:
       - - {x: -677.5, y: 12}
         - {x: -677.5, y: 314}
         - {x: -506.5, y: 500}
-        - {x: -135.5, y: 461}
+        - {x: -151.5, y: 488}
         - {x: 500.5, y: 272}
         - {x: 638.5, y: 168}
         - {x: 508.5, y: 66}
@@ -121,7 +121,9 @@ TextureImporter:
         - {x: 205.5, y: -212}
         - {x: 206.5, y: -288}
         - {x: 76.5, y: -391}
-        - {x: -188.5, y: -464}
+        - {x: -166.5, y: -423}
+        - {x: -180.5, y: -377}
+        - {x: -263.5, y: -371}
         - {x: -675.5, y: -330}
       physicsShape: []
       tessellationDetail: 0
@@ -154,10 +156,6 @@ TextureImporter:
         - {x: 228.5, y: 220.5}
         - {x: 279.5, y: 154.5}
         - {x: 252.5, y: -59.5}
-      - - {x: -27.5, y: 86.5}
-        - {x: -29.5, y: 115.5}
-        - {x: -7.5, y: 115.5}
-        - {x: -7.5, y: 86.5}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -188,6 +186,128 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sh_03_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1219
+        width: 608
+        height: 828
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282437d569c57e0409ace546e53e3505
+      internalID: -812190014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 703
+        width: 347
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b55759c63f76d4098ea918386a7575
+      internalID: -1380904175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_5
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 73
+        width: 304
+        height: 795
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17224a84e21c79343a3a1ee0733aa390
+      internalID: 1656960499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_6
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 36
+        width: 447
+        height: 625
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 0, z: 9, w: 19}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5391146fb5bba14a9b686c0c5d2c31f
+      internalID: 1090134296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_7
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 331
+        width: 305
+        height: 763
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -152.5, y: 108.5}
+        - {x: -138.5, y: 174.5}
+        - {x: -117.5, y: 319.5}
+        - {x: -106.5, y: 381.5}
+        - {x: 22.5, y: 381.5}
+        - {x: 78.5, y: 269.5}
+        - {x: 98.5, y: 329.5}
+        - {x: 152.5, y: 328.5}
+        - {x: 152.5, y: 273.5}
+        - {x: 117.5, y: 36.5}
+        - {x: 89.5, y: -84.5}
+        - {x: 128.5, y: -135.5}
+        - {x: 48.5, y: -381.5}
+        - {x: -11.5, y: -381.5}
+        - {x: -100.5, y: -255.5}
+        - {x: -129.5, y: -146.5}
+        - {x: -152.5, y: -31.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e02ccca8b5d4a5439e01ffbaa687582
+      internalID: 976273733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -202,6 +322,11 @@ TextureImporter:
       Sh_03_0: 1793306201
       Sh_03_1: -988613525
       Sh_03_2: -560181834
+      Sh_03_3: -812190014
+      Sh_03_4: -1380904175
+      Sh_03_5: 1656960499
+      Sh_03_6: 1090134296
+      Sh_03_7: 976273733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 
