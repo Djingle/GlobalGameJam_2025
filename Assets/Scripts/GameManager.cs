@@ -44,8 +44,7 @@ public class GameManager : MonoBehaviour
             case GameState.Menu:
                 break;
             case GameState.GameOver:
-                Destroy(Player.Instance.gameObject);
-                StartCoroutine(Respawn());
+                StartCoroutine(DieAndRespawn());
                 break;
             case GameState.Credits:
                 break;
@@ -55,8 +54,11 @@ public class GameManager : MonoBehaviour
         StateChanged?.Invoke(newState);
     }
 
-    IEnumerator Respawn()
+    IEnumerator DieAndRespawn()
     {
+        yield return new WaitForSeconds(1);
+        Debug.Log("DIE");
+        Destroy(Player.Instance.gameObject);
         yield return new WaitForSeconds(1);
         Debug.Log("SPAWN");
         Instantiate(m_PlayerPrefab, m_SpawnLocation, Quaternion.identity);

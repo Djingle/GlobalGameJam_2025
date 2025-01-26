@@ -138,6 +138,7 @@ public class Player : MonoBehaviour
         m_Bubble = null;
 
         // Animate Player
+        Debug.Log("oui ?");
         m_Animator.SetTrigger("TrShoot");
     }
 
@@ -152,7 +153,13 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Pop!!");
+        m_Animator.SetTrigger("TrPop");
         GameManager.Instance.ChangeState(GameState.GameOver);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("OUI");
+        m_Animator.SetTrigger("TrBounce");
     }
 }
