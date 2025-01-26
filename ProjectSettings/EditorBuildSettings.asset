@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DevTest.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Le jeu final/LE JEU.unity
+    guid: f7b120ad9522d13408b3ac8f7745a401
+  - enabled: 1
+    path: Assets/Scenes/Win Scene.unity
+    guid: 7f1b62423618a5045a953a008b6539ef
   m_configObjects: {}

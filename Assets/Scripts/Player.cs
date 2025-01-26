@@ -71,7 +71,6 @@ public class Player : MonoBehaviour
         }
         Orientate(m_MouseDir);
 
-        Debug.Log("input : " + Input.GetAxis("Mitraillette"));
         // Start shooting (mitraillette)
         if (!m_IsShooting && (Input.GetMouseButtonDown(0) || Input.GetAxis("Mitraillette") > 0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
