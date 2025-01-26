@@ -50,15 +50,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
-  m_ShotSpeed: 7.2
-  m_FireRate: 5.05
-  m_KnockBack: 80
+  m_ShotSpeed: 0.8
+  m_FireRate: 10
+  m_KnockBack: 30
   m_Speed: 2.41
-  m_SizeMin: 0.21
+  m_SizeMin: 0.15
   m_SizeMax: 0.38
   m_Shrink: 1
-  m_ShrinkFactor: 1
-  m_GrowFactor: 1
+  m_ShrinkFactor: 0.3
+  m_GrowFactor: 0.3
 --- !u!58 &-538364056226443254
 CircleCollider2D:
   m_ObjectHideFlags: 0
