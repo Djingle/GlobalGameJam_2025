@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class PickUpBubble : Bubble
 {
-
+    private void Awake()
+    {
+        SetUpScale();
+    }
 }

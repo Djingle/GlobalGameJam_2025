@@ -112,6 +112,7 @@ TextureImporter:
         - {x: -502, y: -652.5}
         - {x: -481, y: -505.5}
         - {x: -292, y: -227.5}
+        - {x: -6, y: -137.5}
         - {x: 63, y: -5.5}
         - {x: 75, y: 195.5}
         - {x: 88, y: 720.5}
@@ -161,14 +162,14 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 66.5, y: -87}
-        - {x: 32.5, y: -83}
+        - {x: 40.5, y: -82}
         - {x: -19.5, y: -133}
         - {x: -77.5, y: -108}
         - {x: -102.5, y: -60}
         - {x: -54.5, y: 72}
         - {x: -8.5, y: 50}
         - {x: 58.5, y: 61}
-        - {x: 107.5, y: 97}
+        - {x: 111.5, y: 102}
         - {x: 126.5, y: 83}
         - {x: 97.5, y: 10}
         - {x: 83.5, y: -56}
@@ -227,11 +228,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18, y: -172.5}
+      - - {x: -26, y: -173.5}
         - {x: -45, y: -58.5}
         - {x: -74, y: -34.5}
         - {x: -138, y: -47.5}
-        - {x: -148, y: -36.5}
+        - {x: -148, y: -38.5}
         - {x: -148, y: -13.5}
         - {x: -83, y: 52.5}
         - {x: -3, y: 144.5}
@@ -260,8 +261,8 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 33.5, y: -35.5}
-        - {x: -23.5, y: -76.5}
+      - - {x: 36.5, y: -38.5}
+        - {x: -21.5, y: -77.5}
         - {x: -86.5, y: -71.5}
         - {x: -110.5, y: -4.5}
         - {x: -53.5, y: 42.5}
@@ -328,7 +329,7 @@ TextureImporter:
       - - {x: -8.5, y: -500}
         - {x: -417.5, y: -509}
         - {x: -457.5, y: 81}
-        - {x: -476.5, y: 308}
+        - {x: -446.5, y: 362}
         - {x: -308.5, y: 513}
         - {x: 74.5, y: 505}
         - {x: 160.5, y: 360}
@@ -349,10 +350,10 @@ TextureImporter:
       name: Sh_01_8
       rect:
         serializedVersion: 2
-        x: 35
+        x: 8
         y: 1171
-        width: 270
-        height: 223
+        width: 297
+        height: 251
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +371,10 @@ TextureImporter:
       name: Sh_01_9
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1399
-        width: 121
-        height: 274
+        x: 197
+        y: 1418
+        width: 156
+        height: 255
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,9 +393,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1482
+        y: 1483
         width: 188
-        height: 566
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

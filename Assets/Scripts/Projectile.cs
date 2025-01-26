@@ -22,12 +22,11 @@ public class Projectile : Bubble
     void Update()
     {
         // Grow the bubble if charge mode is on and it's attached
-        if (m_IsAttached && GameManager.Instance.m_ChargeMode) {
+        if (m_IsAttached && Player.Instance.m_ChargeMode) {
             m_Size += m_ChargeSpeed;
+            SetUpScale();
             Player.Instance.AddSize(-m_Size * m_ChargeSizeMult);
-            transform.localScale = new Vector3(m_Size, m_Size, m_Size);
             transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
-            Debug.Log("oui");
         }
 
 
