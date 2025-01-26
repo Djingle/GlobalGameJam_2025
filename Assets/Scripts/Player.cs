@@ -72,24 +72,25 @@ public class Player : MonoBehaviour
         Orientate(m_MouseDir);
 
         // Start shooting (mitraillette)
-        if (!m_IsShooting && (Input.GetMouseButtonDown(0) || Input.GetAxis("AButton") > 0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+        if (!m_IsShooting && (Input.GetMouseButtonDown(0) || Input.GetAxis("Mitraillette") > 0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
             m_ChargeMode = false;
             StartShoot();
         }
         // Stop shooting (mitraillette)
-        if (!m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(0) || Input.GetAxis("AButton") == 0) && !Input.GetMouseButton(0) && !Input.GetMouseButton(1)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis
+        if (!m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(0) || Input.GetAxis("Mitraillette") == 0) && !Input.GetMouseButton(0) && !Input.GetMouseButton(1)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis
             m_IsShooting = false;
             StopShoot();
         }
         // Start shooting (charged)
-        if (!m_IsShooting && Input.GetMouseButtonDown(1) || Input.GetAxis("RTrigger") > 0) {
+        if (!m_IsShooting && (Input.GetMouseButtonDown(1) || Input.GetAxis("Charge") > 0)) {
+            Debug.Log("CHARGE");
             m_ChargeMode = true;
             m_IsShooting = true;
             StartShoot();
         }
         // Stop shooting (charged)
-        if (m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(1) || Input.GetAxis("RTrigger") ==  0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(0)){
+        if (m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(1) || Input.GetAxis("Charge") ==  0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(0)){
             //m_ChargeMode = false;
             m_IsShooting = false;
             StopShoot();
@@ -189,6 +190,8 @@ public class Player : MonoBehaviour
 
         // Animate Player
         m_Animator.SetTrigger("TrShoot");
+
+        //m_ChargeMode = false;
     }
 
     // Adds size to the bubble
