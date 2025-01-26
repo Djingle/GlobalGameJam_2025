@@ -9,10 +9,11 @@ public abstract class Bubble : MonoBehaviour
 
     protected Collider2D m_Collider;
 
-    private void Awake()
+    public void SetUpScale()
     {
         transform.localScale = new Vector3(m_Size, m_Size, m_Size);
     }
+
     public void PickUp()
     {
         Player.Instance.AddSize(m_Size);

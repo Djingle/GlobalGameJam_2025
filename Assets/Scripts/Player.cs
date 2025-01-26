@@ -99,14 +99,17 @@ public class Player : MonoBehaviour
 
         // Place the bubble in front
         bubble.transform.localPosition = new Vector3(.2f,0,0);
-        float m_RandomSize = Random.Range(m_SizeMin, m_SizeMax);
-        bubble.transform.localScale = new Vector3(m_RandomSize, m_RandomSize, m_RandomSize);
 
         // Disable physics so that it stays in front
         bubble.GetComponent<Rigidbody2D>().simulated = false;
 
         // Keep a ref to the bubble
         m_Bubble = bubble.GetComponent<Projectile>();
+
+        //Set a random size for the bubble
+        float m_RandomSize = Random.Range(m_SizeMin, m_SizeMax);
+        m_Bubble.m_Size = m_RandomSize;
+        m_Bubble.SetUpScale();
 
         // Let the bubble know it's attached
         m_Bubble.m_IsAttached = true;
