@@ -51,14 +51,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
   m_ShotSpeed: 0.8
-  m_FireRate: 10
-  m_KnockBack: 30
+  m_FireRate: 20
+  m_KnockBack: 20
   m_Speed: 2.41
-  m_SizeMin: 0.15
-  m_SizeMax: 0.38
+  m_SizeMin: 0.2
+  m_SizeMax: 0.3
   m_Shrink: 1
-  m_ShrinkFactor: 0.3
-  m_GrowFactor: 0.3
+  m_ShrinkFactor: 0.1
+  m_GrowFactor: 0.1
 --- !u!58 &-538364056226443254
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1878313866864897280}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b8b5daafd566ebf4d9650968f590ed37, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
