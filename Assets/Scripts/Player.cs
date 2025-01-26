@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public float m_ShrinkFactor = 1f;
     public float m_GrowFactor = 1f;
     public float m_DeathScale = .5f;
+    public bool m_ChargeMode = false;
 
     private void Awake()
     {
@@ -60,16 +61,31 @@ public class Player : MonoBehaviour
         }
         Orientate(m_MouseDir);
 
-        if (Input.GetMouseButtonDown(0) || Input.GetAxis("RTrigger") > 0 && !m_IsShooting) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+        // Start shooting (mitraillette)
+        if (!m_IsShooting && Input.GetMouseButtonDown(0) || Input.GetAxis("RTrigger") > 0) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
+            m_IsShooting = true;
+            m_ChargeMode = false;
+            StartShoot();
+        }
+        // Stop shooting (mitraillette)
+        if (!m_ChargeMode && m_IsShooting && (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0) && !Input.GetMouseButton(0)) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis
+            m_IsShooting = false;
+            StopShoot();
+        }
+        // Start shooting (charged)
+        if (!m_IsShooting && Input.GetMouseButtonDown(1)) {
+            m_ChargeMode = true;
             m_IsShooting = true;
             StartShoot();
         }
-        if (Input.GetMouseButtonUp(0) || Input.GetAxis("RTrigger") == 0 && !Input.GetMouseButton(0) && m_IsShooting) {// || Input.GetAxis("HorizontalRight") == 0 || Input.GetAxis("VerticalRight") == 0) {
+        // Stop shooting (charged)
+        if (m_IsShooting && Input.GetMouseButtonUp(1)) {
+            m_ChargeMode = false;
             m_IsShooting = false;
             StopShoot();
         }
 
-        if (!GameManager.Instance.m_ChargeMode && m_IsShooting && Time.time - m_ShootTime > 1/m_FireRate) {
+        if (!m_ChargeMode && m_IsShooting && Time.time - m_ShootTime > 1/m_FireRate) {
             StopShoot();
             StartShoot();
         }
@@ -89,16 +105,17 @@ public class Player : MonoBehaviour
 
     void StartShoot()
     {
+        Debug.Log("Charge Mode : " + m_ChargeMode);
         if (m_Bubble != null) {
             Debug.LogWarning("There is already a bubble !");
             return;
         }
         m_ShootTime = Time.time;
         // Spawn the bubble
-        GameObject bubble = Instantiate(m_BubblePrefab, transform);
+        GameObject bubble = Instantiate(m_BubblePrefab, transform.position, Quaternion.identity);
 
         // Place the bubble in front
-        bubble.transform.localPosition = new Vector3(.2f,0,0);
+        //bubble.transform.localPosition = new Vector3(.2f,0,0);
 
         // Disable physics so that it stays in front
         bubble.GetComponent<Rigidbody2D>().simulated = false;
@@ -130,7 +147,10 @@ public class Player : MonoBehaviour
         bubble_rb.simulated = true;
 
         // Knockback
-        m_rb.AddForce(-direction * m_KnockBack);
+        Debug.Log("size : " + m_Bubble.m_Size);
+        float mult = m_ChargeMode ? 3 : 1;
+        Debug.Log("strength : " + m_Bubble.m_Size * m_KnockBack * mult);
+        m_rb.AddForce(-direction * m_KnockBack * m_Bubble.m_Size * mult);
 
         // Random variation in bubble angle
         float randAngle = Random.Range(-m_AngleMax, m_AngleMax);
@@ -141,7 +161,7 @@ public class Player : MonoBehaviour
         Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
         bubble_rb.velocity = current_velocity + direction * m_ShotSpeed;
 
-        if (!GameManager.Instance.m_ChargeMode) AddSize(-.05f);
+        if (!m_ChargeMode) AddSize(-.05f);
 
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
@@ -149,7 +169,6 @@ public class Player : MonoBehaviour
         m_Bubble = null;
 
         // Animate Player
-        Debug.Log("oui ?");
         m_Animator.SetTrigger("TrShoot");
     }
 
@@ -170,7 +189,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("OUI");
         m_Animator.SetTrigger("TrBounce");
     }
 }

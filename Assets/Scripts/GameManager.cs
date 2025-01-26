@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     // The state the game is currently in. It should only be updated by ChangeState
     public GameState State { get; private set; }
-    public bool m_ChargeMode = true;
     public Vector3 m_SpawnLocation = Vector3.zero;
     public GameObject m_PlayerPrefab;
 
