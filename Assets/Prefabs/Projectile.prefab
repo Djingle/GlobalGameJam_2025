@@ -166,5 +166,5 @@ MonoBehaviour:
   m_ChargeSpeed: 0.003
   m_LifeTime: 20
   m_Drag: 0.5
-  m_ChargeSizeMult: 0.0025
+  m_ChargeSizeMult: 0.03
   m_ColliderActivationTimer: 0.4
