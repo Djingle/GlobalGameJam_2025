@@ -26,7 +26,7 @@ public class Projectile : Bubble
             m_Size += m_ChargeSpeed;
             SetUpScale();
             Player.Instance.AddSize(-m_Size * m_ChargeSizeMult);
-            transform.localPosition += new Vector3(m_ChargeSpeed/2f, 0,0);
+            transform.localPosition += new Vector3(m_ChargeSpeed, 0,0);
         }
 
 
