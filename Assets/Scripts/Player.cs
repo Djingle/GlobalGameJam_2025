@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
             AddSize(-.05f);
             m_CreateBigBubbleSound.Play();
         }
-        int RandomValue = Random.Range(0,5);
+        int RandomValue = Random.Range(1,6);
         m_SoundTab[RandomValue].Play();
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
