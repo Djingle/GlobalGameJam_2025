@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class Player : MonoBehaviour
     public float m_DeathScale = .5f;
     public bool m_ChargeMode = false;
 
+    //sound variable:
+    AudioSource m_DieSound;
+    AudioSource m_CreateBigBubbleSound;
+    public AudioSource[] m_SoundTab;
+
     private void Awake()
     {
         // Keep the GameManager when loading new scenes
@@ -47,6 +53,9 @@ public class Player : MonoBehaviour
     {
         m_Animator = GetComponentInChildren<Animator>();
         m_rb = GetComponent<Rigidbody2D>();
+        m_DieSound = GetComponent<AudioSource>();
+        m_SoundTab = GetComponentsInChildren<AudioSource>();
+        m_CreateBigBubbleSound = GetComponent<AudioSource>();
         m_camera = Camera.main;
     }
     private void Update()
@@ -143,6 +152,7 @@ public class Player : MonoBehaviour
             Debug.Log("no bubble !");
         }
 
+
         Vector2 direction2 = new Vector2(m_MouseDir.x, m_MouseDir.y);
         direction2.Normalize();
         Vector3 direction = new Vector3(direction2.x, direction2.y, 0);
@@ -166,8 +176,12 @@ public class Player : MonoBehaviour
         Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
         bubble_rb.velocity = current_velocity + direction * m_ShotSpeed;
 
-        if (!m_ChargeMode) AddSize(-.05f);
-
+        if (!m_ChargeMode) {
+            AddSize(-.05f);
+            m_CreateBigBubbleSound.Play();
+        }
+        int RandomValue = Random.Range(0,8);
+        m_SoundTab[RandomValue].Play();
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
         m_Bubble.m_IsAttached = false;
@@ -189,6 +203,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         m_Animator.SetTrigger("TrPop");
+        m_DieSound.Play();
         GameManager.Instance.ChangeState(GameState.GameOver);
     }
 
