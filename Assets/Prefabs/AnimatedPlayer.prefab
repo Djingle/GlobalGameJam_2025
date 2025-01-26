@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.77, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8904577423950571816}
@@ -52,15 +52,16 @@ MonoBehaviour:
   m_BubblePrefab: {fileID: 8437850297906122716, guid: 0b42e51e889cec0478fc692922a44753, type: 3}
   m_ShotSpeed: 4
   m_FireRate: 20
-  m_KnockBack: 20
-  m_Speed: 2.41
-  m_SizeMin: 0.2
-  m_SizeMax: 0.3
+  m_KnockBack: 85
+  m_Speed: 2.6
+  m_SizeMin: 0.1
+  m_SizeMax: 0.2
   m_AngleMax: 20
   m_Shrink: 1
   m_ShrinkFactor: 0.1
   m_GrowFactor: 0.1
   m_DeathScale: 0.5
+  m_ChargeMode: 0
 --- !u!58 &-538364056226443254
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -268,8 +269,8 @@ Transform:
   m_GameObject: {fileID: 6492290698325763218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalPosition: {x: 0.239, y: 0, z: 0}
+  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5821712470583076350}
