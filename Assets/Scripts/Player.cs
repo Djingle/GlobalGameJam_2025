@@ -84,7 +84,6 @@ public class Player : MonoBehaviour
         }
         // Start shooting (charged)
         if (!m_IsShooting && (Input.GetMouseButtonDown(1) || Input.GetAxis("Charge") > 0)) {
-            Debug.Log("CHARGE");
             m_ChargeMode = true;
             m_IsShooting = true;
             StartShoot();
@@ -97,7 +96,6 @@ public class Player : MonoBehaviour
         }
 
         if (!m_ChargeMode && m_IsShooting && Time.time - m_ShootTime > 1/m_FireRate) {
-            Debug.Log("stopstart");
             StopShoot();
             StartShoot();
         }
@@ -117,7 +115,6 @@ public class Player : MonoBehaviour
 
     void StartShoot()
     {
-        Debug.Log("Charge Mode : " + m_ChargeMode);
         if (m_Bubble != null) {
             Debug.LogWarning("There is already a bubble !");
             return;
