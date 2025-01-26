@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: da37ca2aed83f6f45ae9e80f2443d016, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1.76
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.04
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Size: 0.4
   m_IsAttached: 0
-  m_ChargeSpeed: 0.01
-  m_LifeTime: 5
+  m_ChargeSpeed: 0.004
+  m_LifeTime: 20
   m_Drag: 0.5
   m_ChargeSizeMult: 0.005
   m_ColliderActivationTimer: 0.5

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public float m_ShotSpeed = 15f;
     public float m_FireRate = 1f;
     public float m_KnockBack = 1f;
+    public float m_ChargeKnockBack = 15f;
     public float m_Speed = 1f;
     public float m_SizeMin = 0.21f;
     public float m_SizeMax = 0.38f;
@@ -80,7 +81,7 @@ public class Player : MonoBehaviour
         }
         // Stop shooting (charged)
         if (m_IsShooting && Input.GetMouseButtonUp(1)) {
-            m_ChargeMode = false;
+            //m_ChargeMode = false;
             m_IsShooting = false;
             StopShoot();
         }
@@ -111,11 +112,15 @@ public class Player : MonoBehaviour
             return;
         }
         m_ShootTime = Time.time;
-        // Spawn the bubble
-        GameObject bubble = Instantiate(m_BubblePrefab, transform.position, Quaternion.identity);
 
-        // Place the bubble in front
-        //bubble.transform.localPosition = new Vector3(.2f,0,0);
+        // Spawn the bubble
+        GameObject bubble;
+        if (m_ChargeMode) {
+            bubble = Instantiate(m_BubblePrefab, transform);
+            bubble.transform.localPosition = new Vector3(.5f, 0, 0);
+            }
+        else
+            bubble = Instantiate(m_BubblePrefab, transform.position, Quaternion.identity);
 
         // Disable physics so that it stays in front
         bubble.GetComponent<Rigidbody2D>().simulated = false;
@@ -148,8 +153,8 @@ public class Player : MonoBehaviour
 
         // Knockback
         Debug.Log("size : " + m_Bubble.m_Size);
-        float mult = m_ChargeMode ? 3 : 1;
-        Debug.Log("strength : " + m_Bubble.m_Size * m_KnockBack * mult);
+        float mult = m_ChargeMode ? m_ChargeKnockBack : 1;
+        Debug.Log("strength : " + m_Bubble.m_Size * m_KnockBack * mult + ", mult : " + mult);
         m_rb.AddForce(-direction * m_KnockBack * m_Bubble.m_Size * mult);
 
         // Random variation in bubble angle
