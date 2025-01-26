@@ -113,7 +113,7 @@ TextureImporter:
         - {x: -73, y: 418}
         - {x: 444, y: 393}
         - {x: 462, y: -118}
-        - {x: 315, y: -437}
+        - {x: 331, y: -437}
         - {x: -249, y: -342}
       physicsShape: []
       tessellationDetail: 0
@@ -138,8 +138,8 @@ TextureImporter:
       outline:
       - - {x: 75, y: -111.5}
         - {x: -46, y: -129.5}
-        - {x: -118, y: -2.5}
-        - {x: -91, y: 123.5}
+        - {x: -132, y: -11.5}
+        - {x: -102, y: 123.5}
         - {x: 16, y: 128.5}
         - {x: 67, y: 111.5}
         - {x: 112, y: 63.5}
@@ -474,6 +474,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sh_02_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1205
+        width: 526
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5054755d5a9d03c4e939c43bba036cab
+      internalID: 179287465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -494,6 +515,7 @@ TextureImporter:
       Sh_02_14: 2119313327
       Sh_02_15: -2125938937
       Sh_02_16: 615726016
+      Sh_02_17: 179287465
       Sh_02_2: 1303948551
       Sh_02_3: -455105768
       Sh_02_4: -348776738
