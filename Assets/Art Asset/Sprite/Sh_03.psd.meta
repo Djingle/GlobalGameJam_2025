@@ -122,6 +122,7 @@ TextureImporter:
         - {x: 206.5, y: -288}
         - {x: 76.5, y: -391}
         - {x: -188.5, y: -464}
+        - {x: -284.5, y: -380}
         - {x: -675.5, y: -330}
       physicsShape: []
       tessellationDetail: 0
@@ -188,6 +189,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sh_03_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1219
+        width: 608
+        height: 828
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282437d569c57e0409ace546e53e3505
+      internalID: -812190014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 703
+        width: 347
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b55759c63f76d4098ea918386a7575
+      internalID: -1380904175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sh_03_5
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 73
+        width: 304
+        height: 795
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17224a84e21c79343a3a1ee0733aa390
+      internalID: 1656960499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -202,6 +266,9 @@ TextureImporter:
       Sh_03_0: 1793306201
       Sh_03_1: -988613525
       Sh_03_2: -560181834
+      Sh_03_3: -812190014
+      Sh_03_4: -1380904175
+      Sh_03_5: 1656960499
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 
