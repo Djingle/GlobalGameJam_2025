@@ -20,9 +20,11 @@ public class Player : MonoBehaviour
     public float m_Speed = 1f;
     public float m_SizeMin = 0.21f;
     public float m_SizeMax = 0.38f;
+    public float m_AngleMax = 1f;
     public bool m_Shrink = true;
     public float m_ShrinkFactor = 1f;
     public float m_GrowFactor = 1f;
+    public float m_DeathScale = .5f;
 
     private void Awake()
     {
@@ -116,19 +118,25 @@ public class Player : MonoBehaviour
             Debug.Log("no bubble !");
         }
 
-        Vector2 knockback = new Vector2(m_MouseDir.x, m_MouseDir.y);
-        knockback.Normalize();
-        m_MouseDir = new Vector3(knockback.x, knockback.y, 0);
+        Vector2 direction2 = new Vector2(m_MouseDir.x, m_MouseDir.y);
+        direction2.Normalize();
+        Vector3 direction = new Vector3(direction2.x, direction2.y, 0);
 
         // Activate physics simulation, give it a velocity
         Rigidbody2D bubble_rb = m_Bubble.GetComponent<Rigidbody2D>();
         bubble_rb.simulated = true;
 
-        Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
-        bubble_rb.velocity = current_velocity + m_MouseDir * m_ShotSpeed;
-
         // Knockback
-        m_rb.AddForce(-m_MouseDir * m_KnockBack);
+        m_rb.AddForce(-direction * m_KnockBack);
+
+        // Random variation in bubble angle
+        float randAngle = Random.Range(-m_AngleMax, m_AngleMax);
+        Quaternion rotation = Quaternion.Euler(0,0,randAngle);
+        direction = rotation * direction;
+
+        // Launch bubble
+        Vector3 current_velocity = new Vector3(m_rb.velocity.x, m_rb.velocity.y, 0);
+        bubble_rb.velocity = current_velocity + direction * m_ShotSpeed;
 
         if (!GameManager.Instance.m_ChargeMode) AddSize(-.05f);
 
@@ -148,7 +156,7 @@ public class Player : MonoBehaviour
         if (m_Shrink == false) return;
         size = size > 0 ? size * m_GrowFactor : size * m_ShrinkFactor;
         transform.localScale += new Vector3(size, size, size);
-        //if (transform.localScale.x <= 2f) { Pop(); }
+        if (transform.localScale.x <= m_DeathScale) { Die(); }
     }
 
     public void Die()

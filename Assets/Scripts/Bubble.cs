@@ -26,15 +26,11 @@ public abstract class Bubble : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        Debug.Log("Trigger");
         if (m_IsAttached || other.gameObject.GetComponent<PlayerTrigger>() == null) {
-            Debug.Log("return");
             return;
         }
 
         else {
-            Debug.Log("pick up");
             PickUp();
         }
     }
