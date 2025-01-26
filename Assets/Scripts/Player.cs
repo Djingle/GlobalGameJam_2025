@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         }
         Orientate(m_MouseDir);
 
+        Debug.Log("input : " + Input.GetAxis("Mitraillette"));
         // Start shooting (mitraillette)
         if (!m_IsShooting && (Input.GetMouseButtonDown(0) || Input.GetAxis("Mitraillette") > 0)) {// || Input.GetAxis("HorizontalRight") > 0 || Input.GetAxis("VerticalRight") > 0) {
             m_IsShooting = true;
@@ -181,7 +182,7 @@ public class Player : MonoBehaviour
             AddSize(-.05f);
             m_CreateBigBubbleSound.Play();
         }
-        int RandomValue = Random.Range(0,8);
+        int RandomValue = Random.Range(0,5);
         m_SoundTab[RandomValue].Play();
         // Let go of the bubble
         m_Bubble.transform.SetParent(null);
