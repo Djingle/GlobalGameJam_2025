@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3238379365061208606}
   - component: {fileID: 2065335145776289530}
   - component: {fileID: 9129740452270256643}
+  - component: {fileID: 7306873087870964381}
   m_Layer: 0
   m_Name: Sh_04_6
   m_TagString: Untagged
@@ -133,3 +134,15 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &7306873087870964381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441969485749438961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d596dfd51279a741b6d23e1be2b6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
