@@ -956,6 +956,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gregg
       objectReference: {fileID: 0}
+    - target: {fileID: 6988917776571168620, guid: 70c313ddeca841047968d66cdeec0b3e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626797351536835942, guid: 70c313ddeca841047968d66cdeec0b3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626797351536835942, guid: 70c313ddeca841047968d66cdeec0b3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5.12
+      objectReference: {fileID: 0}
     - target: {fileID: 8626797351536835942, guid: 70c313ddeca841047968d66cdeec0b3e, type: 3}
       propertyPath: m_SortingOrder
       value: -1
