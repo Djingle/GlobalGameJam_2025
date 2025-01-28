@@ -9,5 +9,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("LE JEU");
     }
- 
 }
