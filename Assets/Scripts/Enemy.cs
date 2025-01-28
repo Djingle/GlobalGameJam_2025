@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float m_Speed = 1f;
+    public bool m_Flip = false;
 
     bool m_Agro;
     Vector3 m_PlayerDir;
@@ -28,7 +29,8 @@ public class Enemy : MonoBehaviour
     void Orientate(Vector3 target)
     {
         float rotZ = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        float offset = m_Flip ? rotZ + 180 : rotZ;
+        transform.rotation = Quaternion.Euler(0, 0, offset);
     }
 
     // Set m_Agro and triggers agro animation
