@@ -9,7 +9,14 @@ public class TriggerZone : MonoBehaviour
     {
         if (collider.gameObject.GetComponent<Player>() == null) return;
         foreach (Enemy enemy in m_Enemies) {
-            enemy.Aggro();
+            enemy.Agro(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider) {
+        if (collider.gameObject.GetComponent<Player>() == null) return;
+        foreach (Enemy enemy in m_Enemies) {
+            enemy.Agro(false);
         }
     }
 }
