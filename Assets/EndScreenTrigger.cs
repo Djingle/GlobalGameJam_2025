@@ -10,7 +10,6 @@ public class EndScreenTrigger : MonoBehaviour
         if (collision.gameObject.GetComponent<Player>() == null) return;
         Debug.Log("OUAAAAAAIS");
         SceneManager.LoadSceneAsync("Win Scene");
+        //Player.Instance.Die();
     }
-
-
 }

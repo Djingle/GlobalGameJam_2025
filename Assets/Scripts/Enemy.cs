@@ -38,12 +38,14 @@ public class Enemy : MonoBehaviour
     {
         if (agro) {
             m_Agro = true;
+            if (m_Animator == null) return;
             m_Animator.SetTrigger("TrAgro");
         }
         else {
             m_Agro = false;
+			if (m_Animator == null) return;
             m_Animator.SetTrigger("TrDesagro");
-        }
+		}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

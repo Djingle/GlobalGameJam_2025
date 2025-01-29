@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using System;
-public class GameManager : MonoBehaviour
-{
+using System.Linq;
+using Unity.VisualScripting;
+using System.Collections.Generic;
+public class GameManager : MonoBehaviour {
 
     public static Action<GameState> StateChanged;
     // The GameManager singleton instance : the GameManager Script can be accessed anywhere with : GameManager.Instance
@@ -11,6 +13,12 @@ public class GameManager : MonoBehaviour
     public GameState State { get; private set; }
     public Vector3 m_SpawnLocation = Vector3.zero;
     public GameObject m_PlayerPrefab;
+    public GameObject m_PickUpPrefab;
+    public Transform m_LayerObject;
+    public float m_SpawnSpeed = 1f;
+
+    Coroutine m_SpawnCoroutine = null;
+    List<PickUp> m_PickUps;
 
     private void Awake()
     {
@@ -25,10 +33,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        /*foreach (PickUpBubble b in m_PickUps) {
+            Debug.Log("b pos : " + b.transform.position);
+        }*/
+
+        m_PickUps = new List<PickUp>();
     }
 
     private void Start()
     {
+        SavePickUps();
         ChangeState(GameState.Menu);
     }
 
@@ -43,7 +58,10 @@ public class GameManager : MonoBehaviour
             case GameState.Menu:
                 break;
             case GameState.GameOver:
-                StartCoroutine(DieAndRespawn());
+                Debug.Log("GAME OVER");
+                if (m_SpawnCoroutine != null) return;
+				Debug.Log("START COROUTINE");
+				m_SpawnCoroutine = StartCoroutine(DieAndRespawn());
                 break;
             case GameState.Credits:
                 break;
@@ -53,17 +71,52 @@ public class GameManager : MonoBehaviour
         StateChanged?.Invoke(newState);
     }
 
+	// Save location of every Bubble in the level to spawn them back when player dies
+	private void SavePickUps() {
+        PickUpBubble[] pickUps = FindObjectsByType<PickUpBubble>(FindObjectsSortMode.InstanceID);
+        foreach (PickUpBubble pickup in pickUps) {
+            PickUp newPickUp = new(pickup.transform.position, pickup.m_Size, pickup.gameObject);
+            m_PickUps.Add(newPickUp);
+        }
+	}
+
+    private void Spawn()
+    {
+		Instantiate(m_PlayerPrefab, m_SpawnLocation, Quaternion.identity);
+        Player.Instance.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, m_SpawnSpeed));
+	}
+
+    private void SpawnPickUps()
+    {
+        Debug.Log("Spawning Pick Ups");
+        foreach(PickUp bubble in m_PickUps) {
+            if (bubble.instance != null) continue;
+
+            Bubble newBubble= Instantiate(m_PickUpPrefab, bubble.position, Quaternion.identity, m_LayerObject).GetComponent<Bubble>();
+
+            newBubble.m_Size = bubble.size;
+            newBubble.SetUpScale();
+        }
+    }
+
+    // Coroutine that waits for 1 sec, destroys the player
     IEnumerator DieAndRespawn()
     {
         yield return new WaitForSeconds(1);
-        Debug.Log("DIE");
-        Destroy(Player.Instance.gameObject);
-        yield return new WaitForSeconds(1);
-        Debug.Log("SPAWN");
-        Instantiate(m_PlayerPrefab, m_SpawnLocation, Quaternion.identity);
+		Debug.Log("----DIE----");
+		Destroy(Player.Instance.gameObject);
+        yield return new WaitForSeconds(.3f);
+		Debug.Log("---SPAWN---");
+		Spawn();
+
+		Debug.Log("---BUBBLE--");
+		SpawnPickUps();
         Cameraman.Instance.SetTarget();
+
+        m_SpawnCoroutine = null;
     }
 }
+
 
 
 
@@ -74,4 +127,17 @@ public enum GameState
     Menu,
     GameOver,
     Credits
+}
+
+public class PickUp 
+{
+    public Vector3 position;
+    public float size;
+    public GameObject instance;
+
+	public PickUp(Vector3 position, float size, GameObject instance) {
+        this.instance = instance;
+        this.position = position;
+        this.size = size;
+	}
 }

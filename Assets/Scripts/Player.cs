@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     float m_ShootTime = .1f;
     bool m_IsShooting = false;
     Animator m_Animator;
+    bool m_IsDead = false;
 
     public GameObject m_BubblePrefab;
     public float m_ShotSpeed = 15f;
@@ -204,7 +205,9 @@ public class Player : MonoBehaviour
     {
         m_Animator.SetTrigger("TrPop");
         m_DieSound.Play();
+        if (m_IsDead) return;
         GameManager.Instance.ChangeState(GameState.GameOver);
+        m_IsDead = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

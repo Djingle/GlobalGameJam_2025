@@ -8,9 +8,6 @@ public class Cameraman : MonoBehaviour
     private Transform target;
     private void Awake()
     {
-        // Keep the GameManager when loading new scenes
-        DontDestroyOnLoad(gameObject);
-
         // Singleton checks
         if (Instance == null) { // If there is no instance of GameManager yet, then this one becomes the only instance
             Instance = this;
@@ -27,6 +24,7 @@ public class Cameraman : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (Player.Instance == null) return;
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
 

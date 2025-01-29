@@ -35066,16 +35066,24 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4981397387435816708, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
+      propertyPath: m_LayerObject
+      value: 
+      objectReference: {fileID: 979209979}
+    - target: {fileID: 4981397387435816708, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
+      propertyPath: m_PickUpPrefab
+      value: 
+      objectReference: {fileID: 8437850297906122716, guid: 7385a62a27987ef4aadaf6d00c41088d, type: 3}
+    - target: {fileID: 4981397387435816708, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
       propertyPath: m_PlayerPrefab
       value: 
       objectReference: {fileID: 1878313866864897280, guid: 70c313ddeca841047968d66cdeec0b3e, type: 3}
     - target: {fileID: 4981397387435816708, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
       propertyPath: m_SpawnLocation.y
-      value: -10.24
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 8542026158021172749, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.566157
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8542026158021172749, guid: f42c5c59eef68e24282f0a9a64b39761, type: 3}
       propertyPath: m_LocalPosition.y
