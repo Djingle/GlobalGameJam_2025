@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
 
 	// Save location of every Bubble in the level to spawn them back when player dies
 	private void SavePickUps() {
+        m_PickUps.Clear();
         PickUpBubble[] pickUps = FindObjectsByType<PickUpBubble>(FindObjectsSortMode.InstanceID);
         foreach (PickUpBubble pickup in pickUps) {
             PickUp newPickUp = new(pickup.transform.position, pickup.m_Size, pickup.gameObject);
@@ -88,28 +89,27 @@ public class GameManager : MonoBehaviour {
 
     private void SpawnPickUps()
     {
-        Debug.Log("Spawning Pick Ups");
+        int i = 0;
         foreach(PickUp bubble in m_PickUps) {
             if (bubble.instance != null) continue;
 
-            Bubble newBubble= Instantiate(m_PickUpPrefab, bubble.position, Quaternion.identity, m_LayerObject).GetComponent<Bubble>();
+			Bubble newBubble= Instantiate(m_PickUpPrefab, bubble.position, Quaternion.identity, m_LayerObject).GetComponent<Bubble>();
 
             newBubble.m_Size = bubble.size;
             newBubble.SetUpScale();
+            i++;
         }
+        SavePickUps();
     }
 
     // Coroutine that waits for 1 sec, destroys the player
     IEnumerator DieAndRespawn()
     {
         yield return new WaitForSeconds(1);
-		Debug.Log("----DIE----");
 		Destroy(Player.Instance.gameObject);
         yield return new WaitForSeconds(.3f);
-		Debug.Log("---SPAWN---");
 		Spawn();
 
-		Debug.Log("---BUBBLE--");
 		SpawnPickUps();
         Cameraman.Instance.SetTarget();
 

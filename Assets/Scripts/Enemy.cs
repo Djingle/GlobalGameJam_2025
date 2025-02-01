@@ -11,9 +11,19 @@ public class Enemy : MonoBehaviour
     bool m_Agro;
     Vector3 m_PlayerDir;
     Animator m_Animator;
+    Vector3 m_SpawnPos;
+    Quaternion m_SpawnRot;
 
 	private void Awake() {
 		m_Animator = GetComponent<Animator>();
+        m_SpawnPos = transform.position;
+        m_SpawnRot = transform.rotation;
+
+        GameManager.StateChanged += Respawn;
+	}
+
+	private void OnDestroy() {
+		GameManager.StateChanged -= Respawn;
 	}
 
 
@@ -52,5 +62,12 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>() == null) return;
         Player.Instance.Die();
+    }
+
+    private void Respawn(GameState state) {
+        if (state != GameState.GameOver) return;
+        transform.position = m_SpawnPos;
+        transform.rotation = m_SpawnRot;
+        Agro(false);
     }
 }
